@@ -20,7 +20,7 @@ let package = Package(
     ],
     targets: [
         // The main executable target containing all source files for the application.
-        .target(
+        .executableTarget(
             name: "BrisaApp",
             dependencies: [],
             path: "BrisaApp/Sources"
