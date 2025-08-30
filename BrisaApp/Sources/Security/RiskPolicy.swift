@@ -21,6 +21,9 @@ public struct RiskPolicy {
         case .openURL(_):
             // Простая навигация — низкий риск
             return .low
+        case .openApp(_):
+            // Открытие локального приложения — низкий риск
+            return .low
         case .prepareDraft:
             return .low
         case .custom(let desc):

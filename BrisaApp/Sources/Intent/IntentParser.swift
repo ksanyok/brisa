@@ -11,6 +11,14 @@ struct IntentParser {
         var steps: [TaskStep] = []
         let lowercased = command.lowercased()
 
+        // Попытка извлечь название приложения для команды "открыть/открой/open"
+        let words = lowercased.split(separator: " ")
+        if let idx = words.firstIndex(where: { $0 == "открыть" || $0 == "открой" || $0 == "open" }), idx + 1 < words.count {
+            let appNameWord = String(words[idx + 1])
+            let appName = appNameWord.capitalized
+            steps.append(TaskStep(description: "Открыть приложение \(appName)", action: .openApp(appName)))
+        }
+
         // Если встречается URL, открываем его
         if let url = extractURL(from: command) {
             steps.append(TaskStep(description: "Открыть страницу \(url)", action: .openURL(url)))

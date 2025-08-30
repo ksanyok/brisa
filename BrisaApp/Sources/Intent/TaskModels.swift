@@ -7,6 +7,8 @@ public enum StepAction {
     case navigateToPublish
     case fillForm
     case send
+    /// Открыть приложение по названию. Например, "Telegram"
+    case openApp(String)
     case custom(String)
 }
 
