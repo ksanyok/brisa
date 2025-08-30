@@ -9,15 +9,35 @@ public enum RiskCategory {
 
 /// Компонент, который классифицирует действия и определяет необходимость подтверждения.
 public struct RiskPolicy {
-    /// Определяет категорию риска для переданного шага.
-    public func category(for action: TaskStep) -> RiskCategory {
-        // TODO: анализировать описание шага и возвращать категорию риска
-        return .low
+    /// Определяет категорию риска для переданного шага на основе его действия.
+    public func category(for step: TaskStep) -> RiskCategory {
+        switch step.action {
+        case .send:
+            // Отправка контента во внешний мир — высокий риск
+            return .high
+        case .navigateToPublish, .fillForm:
+            // Заполнение форм и переход к публикации — средний риск
+            return .medium
+        case .openURL:
+            // Простая навигация — низкий риск
+            return .low
+        case .prepareDraft:
+            return .low
+        case .custom(let desc):
+            // Простейшая эвристика: если строка содержит опасные слова, повышаем риск
+            let lowered = desc.lowercased()
+            if lowered.contains("delete") || lowered.contains("удалить") || lowered.contains("pay") || lowered.contains("купить") {
+                return .high
+            } else if lowered.contains("update") || lowered.contains("изменить") {
+                return .medium
+            }
+            return .low
+        }
     }
 
     /// Требуется ли подтверждение для шага с учётом политики.
-    public func requiresConfirmation(for action: TaskStep) -> Bool {
-        switch category(for: action) {
+    public func requiresConfirmation(for step: TaskStep) -> Bool {
+        switch category(for: step) {
         case .low:
             return false
         case .medium, .high:
