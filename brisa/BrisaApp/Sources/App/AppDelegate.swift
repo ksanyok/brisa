@@ -43,8 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc private func showTasks() {
-        // Открываем окно очереди задач
-        TasksWindow.shared.show()
+        // TODO: отображать окно со списком задач
     }
 
     @objc private func openSettings() {

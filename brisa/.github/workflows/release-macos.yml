@@ -1,0 +1,50 @@
+name: Release macOS
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v2
+        with:
+          xcode-version: '15.0'
+
+      - name: Generate Xcode project from Package.swift
+        run: swift package generate-xcodeproj
+
+      - name: Archive application
+        run: |
+          xcodebuild -project Brisa.xcodeproj \
+            -scheme BrisaApp \
+            -configuration Release \
+            -archivePath build/BrisaApp.xcarchive archive
+
+      - name: Create distributable zip
+        run: |
+          mkdir -p dist
+          # Экспортируем приложение из архива и упаковываем в zip
+          ditto -c -k --sequesterRsrc --keepParent \
+            build/BrisaApp.xcarchive/Products/Applications/Brisa.app \
+            dist/Brisa.zip
+
+      - name: Generate release notes
+        id: generate-notes
+        run: |
+          echo "RELEASE_NOTES=$(python3 -c \"import pathlib, re; changelog=pathlib.Path('CHANGELOG.md').read_text();\
+import re, itertools;\
+match=re.search(r'^## \[(.+?)\] - (.+?)$', changelog, re.MULTILINE);\
+print(match.group(0) if match else '')\")" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body: ${{ steps.generate-notes.outputs.RELEASE_NOTES }}
+          files: dist/Brisa.zip

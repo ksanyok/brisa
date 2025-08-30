@@ -1,0 +1,36 @@
+name: Build macOS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v2
+        with:
+          xcode-version: '15.0'
+
+      - name: Generate Xcode project from Package.swift
+        run: swift package generate-xcodeproj
+
+      - name: Build BrisaApp
+        run: |
+          # Build the generated Xcode project. The scheme name matches the executable product.
+          xcodebuild -project Brisa.xcodeproj \
+            -scheme BrisaApp \
+            -configuration Release \
+            -derivedDataPath build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: BrisaApp
+          path: build
