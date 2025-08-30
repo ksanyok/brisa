@@ -1,3 +1,0 @@
-// This is a placeholder Xcode project file.
-// The actual `.xcodeproj` should be generated using Xcode or XcodeGen.
-// It is kept here to satisfy the repository structure defined in the specification.
