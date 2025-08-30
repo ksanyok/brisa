@@ -48,7 +48,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc private func openSettings() {
-        NSApp.sendAction(Selector(("showPreferencesWindow:")), to: nil, from: nil)
+        // Открываем собственное окно настроек вместо стандартного окна Preferences
+        SettingsWindow.shared.show()
     }
 
     @objc private func togglePause() {

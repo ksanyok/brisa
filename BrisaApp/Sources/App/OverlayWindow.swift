@@ -19,8 +19,14 @@ final class OverlayWindow {
             w.isReleasedWhenClosed = false
             self.window = w
         }
-        window?.center()
-        window?.makeKeyAndOrderFront(nil)
+        if let w = window {
+            w.center()
+            w.makeKeyAndOrderFront(nil)
+            // Устанавливаем фокус на содержимом, чтобы можно было сразу набирать текст
+            if let hosting = w.contentViewController as? NSHostingController<OverlayView> {
+                w.makeFirstResponder(hosting.view)
+            }
+        }
         NSApp.activate(ignoringOtherApps: true)
     }
 }
