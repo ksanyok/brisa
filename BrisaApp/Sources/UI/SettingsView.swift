@@ -9,7 +9,12 @@ struct SettingsView: View {
         Form {
             Section(header: Text("OpenAI")) {
                 SecureField("API Key", text: $apiKey)
-                Text("Ваш ключ сохраняется в Keychain и используется для запросов к OpenAI.")
+                Button("Сохранить ключ") {
+                    // Сохраняем ключ в UserDefaults для MVP и настраиваем RealtimeManager
+                    UserDefaults.standard.set(apiKey, forKey: "OpenAIAPIKey")
+                    RealtimeManager.shared.configure(apiKey: apiKey)
+                }
+                Text("Ваш ключ сохраняется локально и используется для запросов к OpenAI.")
                     .font(.footnote)
                     .foregroundColor(.secondary)
             }
@@ -22,6 +27,13 @@ struct SettingsView: View {
             Section(header: Text("Безопасность")) {
                 Text("Политика подтверждений настраивается через RiskPolicy и будет интегрирована в будущих версиях.")
                     .font(.footnote)
+            }
+        }
+        .onAppear {
+            // Загружаем сохранённый ключ при открытии настроек
+            if let storedKey = UserDefaults.standard.string(forKey: "OpenAIAPIKey"), !storedKey.isEmpty {
+                apiKey = storedKey
+                RealtimeManager.shared.configure(apiKey: storedKey)
             }
         }
         .padding()

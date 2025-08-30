@@ -12,6 +12,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         item.button?.image?.isTemplate = true
         item.menu = constructMenu()
         self.statusItem = item
+
+        // При старте приложения пытаемся восстановить ранее сохранённый ключ API и настроить движок.
+        if let key = UserDefaults.standard.string(forKey: "OpenAIAPIKey"), !key.isEmpty {
+            RealtimeManager.shared.configure(apiKey: key)
+        }
     }
 
     private func constructMenu() -> NSMenu {
