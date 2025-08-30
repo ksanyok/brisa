@@ -18,7 +18,7 @@ public struct RiskPolicy {
         case .navigateToPublish, .fillForm:
             // Заполнение форм и переход к публикации — средний риск
             return .medium
-        case .openURL:
+        case .openURL(_):
             // Простая навигация — низкий риск
             return .low
         case .prepareDraft:
