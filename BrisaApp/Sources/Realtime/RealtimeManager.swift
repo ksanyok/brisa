@@ -12,8 +12,24 @@ final class RealtimeManager: ObservableObject {
     /// Underlying realtime engine. Optional until configured with an API key.
     private var engine: RealtimeEngine?
 
-    /// Published list of chat messages. Each entry is a string like "User: …" or "Brisa: …".
-    @Published var messages: [String] = []
+    /// Chat message model with role and content. Each message has a unique identifier for SwiftUI lists.
+    struct ChatMessage: Identifiable {
+        enum Role {
+            case user
+            case assistant
+            case system
+            case error
+        }
+        let id = UUID()
+        let role: Role
+        let content: String
+
+        /// Возвращает true, если сообщение отправлено пользователем. Удобно для UI.
+        var isUser: Bool { role == .user }
+    }
+
+    /// Published list of chat messages used to render the dialogue in the UI.
+    @Published var messages: [ChatMessage] = []
 
     private init() {}
 
@@ -27,15 +43,16 @@ final class RealtimeManager: ObservableObject {
     /// Sends a user message to the engine and appends the assistant's response to the transcript.
     func send(text: String) {
         guard let engine = engine else {
-            messages.append("[Error] API key not configured")
+            messages.append(ChatMessage(role: .error, content: "API key not configured"))
             return
         }
         let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
-        messages.append("Вы: \(trimmed)")
+        // Append the user's message to the conversation
+        messages.append(ChatMessage(role: .user, content: trimmed))
         engine.send(text: trimmed) { [weak self] response in
             DispatchQueue.main.async {
-                self?.messages.append("Brisa: \(response)")
+                self?.messages.append(ChatMessage(role: .assistant, content: response))
             }
         }
     }

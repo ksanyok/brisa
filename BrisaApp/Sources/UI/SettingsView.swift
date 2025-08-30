@@ -10,6 +10,7 @@ struct SettingsView: View {
     @State private var cloneHotkey: String = ""
     @State private var agentSpaceHotkey: String = ""
     @State private var pauseHotkey: String = ""
+    @State private var useAgentSpace: Bool = true
 
     var body: some View {
         Form {
@@ -59,6 +60,16 @@ struct SettingsView: View {
                     .font(.footnote)
                     .foregroundColor(.secondary)
             }
+
+            Section(header: Text("Agent Space")) {
+                Toggle("Использовать отдельный рабочий стол для агента", isOn: $useAgentSpace)
+                    .onChange(of: useAgentSpace) { newValue in
+                        UserDefaults.standard.set(newValue, forKey: "UseAgentSpace")
+                    }
+                Text("При включении агент будет работать в соседнем Space, а текущий останется свободным для вашей работы.")
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+            }
         }
         .onAppear {
             // Загружаем сохранённый ключ при открытии настроек
@@ -72,6 +83,7 @@ struct SettingsView: View {
             cloneHotkey = UserDefaults.standard.string(forKey: "HotkeyClone") ?? cloneHotkey
             agentSpaceHotkey = UserDefaults.standard.string(forKey: "HotkeyAgentSpace") ?? agentSpaceHotkey
             pauseHotkey = UserDefaults.standard.string(forKey: "HotkeyPause") ?? pauseHotkey
+            useAgentSpace = UserDefaults.standard.object(forKey: "UseAgentSpace") as? Bool ?? useAgentSpace
         }
         .padding()
         .frame(minWidth: 400, minHeight: 300)

@@ -8,7 +8,11 @@ struct BrisaApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
-        // Используем только окно настроек в разделе «Settings». Остальные окна управляются вручную через AppDelegate.
+        // Пустая группа окон. Не отображается, но необходима для поддержки окна настроек.
+        WindowGroup {
+            EmptyView()
+        }
+        // Используем сцены настроек для показа окна Preferences по ⌘, и пункту меню Settings.
         Settings {
             SettingsView()
         }
