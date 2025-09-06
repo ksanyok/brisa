@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 56;
+  objects = {
+
+/* Begin PBXBuildFile section */
+    00F001000000000000000001 /* BrisaAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000001 /* BrisaAIApp.swift */; };
+    00F001000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000002 /* AppDelegate.swift */; };
+    00F001000000000000000003 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000003 /* MenuBarController.swift */; };
+    00F001000000000000000004 /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000004 /* HotkeyManager.swift */; };
+    00F001000000000000000005 /* CommandPaletteWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000005 /* CommandPaletteWindow.swift */; };
+    00F001000000000000000006 /* SettingsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000006 /* SettingsWindow.swift */; };
+    00F001000000000000000007 /* LogsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000007 /* LogsWindow.swift */; };
+    00F001000000000000000008 /* ConsentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000008 /* ConsentWindow.swift */; };
+    00F001000000000000000009 /* Orchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000009 /* Orchestrator.swift */; };
+    00F00100000000000000000A /* OpenAppTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E00100000000000000000A /* OpenAppTool.swift */; };
+    00F00100000000000000000B /* ClickTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E00100000000000000000B /* ClickTool.swift */; };
+    00F00100000000000000000C /* TypeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E00100000000000000000C /* TypeTool.swift */; };
+    00F00100000000000000000D /* WaitFor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E00100000000000000000D /* WaitFor.swift */; };
+    00F00100000000000000000E /* NavigateURLTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E00100000000000000000E /* NavigateURLTool.swift */; };
+    00F00100000000000000000F /* MemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E00100000000000000000F /* MemoryStore.swift */; };
+    00F001000000000000000010 /* ScreenCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000010 /* ScreenCapture.swift */; };
+    00F001000000000000000011 /* VisionAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000011 /* VisionAnalyzer.swift */; };
+    00F001000000000000000012 /* STTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000012 /* STTManager.swift */; };
+    00F001000000000000000013 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000013 /* TTSManager.swift */; };
+    00F001000000000000000014 /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000014 /* OpenAIClient.swift */; };
+    00F001000000000000000015 /* BrisaLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000015 /* BrisaLogger.swift */; };
+    00F001000000000000000016 /* PermissionsGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000016 /* PermissionsGuide.swift */; };
+    00F001000000000000000017 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000017 /* AppConfig.swift */; };
+    00F001000000000000000018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000018 /* Assets.xcassets */; };
+    00F001000000000000000019 /* BrisaAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E001000000000000000019 /* BrisaAITests.swift */; };
+    00F00100000000000000001D /* FileTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E00100000000000000001D /* FileTool.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+    00112233445566778899AAE0 /* PBXContainerItemProxy */ = {isa = PBXContainerItemProxy; containerPortal = 00112233445566778899AABB /* Project object */; proxyType = 1; remoteGlobalIDString = 00112233445566778899AAC8; remoteInfo = BrisaAI; };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+    00E001000000000000000001 /* BrisaAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrisaAIApp.swift; sourceTree = "<group>"; };
+    00E001000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+    00E001000000000000000003 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+    00E001000000000000000004 /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
+    00E001000000000000000005 /* CommandPaletteWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPaletteWindow.swift; sourceTree = "<group>"; };
+    00E001000000000000000006 /* SettingsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindow.swift; sourceTree = "<group>"; };
+    00E001000000000000000007 /* LogsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsWindow.swift; sourceTree = "<group>"; };
+    00E001000000000000000008 /* ConsentWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentWindow.swift; sourceTree = "<group>"; };
+    00E001000000000000000009 /* Orchestrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orchestrator.swift; sourceTree = "<group>"; };
+    00E00100000000000000000A /* OpenAppTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAppTool.swift; sourceTree = "<group>"; };
+    00E00100000000000000000B /* ClickTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickTool.swift; sourceTree = "<group>"; };
+    00E00100000000000000000C /* TypeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTool.swift; sourceTree = "<group>"; };
+    00E00100000000000000000D /* WaitFor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitFor.swift; sourceTree = "<group>"; };
+    00E00100000000000000000E /* NavigateURLTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateURLTool.swift; sourceTree = "<group>"; };
+    00E00100000000000000000F /* MemoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStore.swift; sourceTree = "<group>"; };
+    00E001000000000000000010 /* ScreenCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCapture.swift; sourceTree = "<group>"; };
+    00E001000000000000000011 /* VisionAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAnalyzer.swift; sourceTree = "<group>"; };
+    00E001000000000000000012 /* STTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speech/STTManager.swift; sourceTree = "<group>"; };
+    00E001000000000000000013 /* TTSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speech/TTSManager.swift; sourceTree = "<group>"; };
+    00E001000000000000000014 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
+    00E001000000000000000015 /* BrisaLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrisaLogger.swift; sourceTree = "<group>"; };
+    00E001000000000000000016 /* PermissionsGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsGuide.swift; sourceTree = "<group>"; };
+    00E001000000000000000017 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+    00E001000000000000000018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+    00E00100000000000000001A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+    00E00100000000000000001B /* BrisaAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrisaAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+    00E001000000000000000019 /* BrisaAITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrisaAITests.swift; sourceTree = "<group>"; };
+    00E00100000000000000001C /* BrisaAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrisaAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+    00E00100000000000000001D /* FileTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTool.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+    00112233445566778899AAD0 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+    00112233445566778899AACC /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+    00112233445566778899AABD /* Products */ = {isa = PBXGroup; children = (
+        00E00100000000000000001B /* BrisaAI.app */,
+        00E00100000000000000001C /* BrisaAITests.xctest */,
+    ); name = Products; sourceTree = "<group>"; };
+    00112233445566778899AABE /* App */ = {isa = PBXGroup; children = (
+        00E001000000000000000001 /* BrisaAIApp.swift */,
+        00E001000000000000000002 /* AppDelegate.swift */,
+    ); path = App; sourceTree = "<group>"; };
+    00112233445566778899AABF /* MenuBar */ = {isa = PBXGroup; children = (
+        00E001000000000000000003 /* MenuBarController.swift */,
+    ); path = MenuBar; sourceTree = "<group>"; };
+    00112233445566778899AAC0 /* Hotkey */ = {isa = PBXGroup; children = (
+        00E001000000000000000004 /* HotkeyManager.swift */,
+    ); path = Hotkey; sourceTree = "<group>"; };
+    00112233445566778899AAC1 /* Windows */ = {isa = PBXGroup; children = (
+        00E001000000000000000005 /* CommandPaletteWindow.swift */,
+        00E001000000000000000006 /* SettingsWindow.swift */,
+        00E001000000000000000007 /* LogsWindow.swift */,
+        00E001000000000000000008 /* ConsentWindow.swift */,
+    ); path = Windows; sourceTree = "<group>"; };
+    00112233445566778899AAC2 /* Agent */ = {isa = PBXGroup; children = (
+        00E001000000000000000009 /* Orchestrator.swift */,
+        00E00100000000000000000E /* NavigateURLTool.swift */,
+        00E00100000000000000000A /* OpenAppTool.swift */,
+        00E00100000000000000000B /* ClickTool.swift */,
+        00E00100000000000000000C /* TypeTool.swift */,
+        00E00100000000000000000D /* WaitFor.swift */,
+        00E00100000000000000000F /* MemoryStore.swift */,
+        00E001000000000000000010 /* ScreenCapture.swift */,
+        00E001000000000000000011 /* VisionAnalyzer.swift */,
+        00E001000000000000000012 /* STTManager.swift */,
+        00E001000000000000000013 /* TTSManager.swift */,
+        00E00100000000000000001D /* FileTool.swift */,
+    ); path = Agent; sourceTree = "<group>"; };
+    00112233445566778899AAC3 /* OpenAI */ = {isa = PBXGroup; children = (
+        00E001000000000000000014 /* OpenAIClient.swift */,
+    ); path = OpenAI; sourceTree = "<group>"; };
+    00112233445566778899AAC4 /* Logging */ = {isa = PBXGroup; children = (
+        00E001000000000000000015 /* BrisaLogger.swift */,
+    ); path = Logging; sourceTree = "<group>"; };
+    00112233445566778899AAC5 /* Permissions */ = {isa = PBXGroup; children = (
+        00E001000000000000000016 /* PermissionsGuide.swift */,
+    ); path = Permissions; sourceTree = "<group>"; };
+    00112233445566778899AAC6 /* Config */ = {isa = PBXGroup; children = (
+        00E001000000000000000017 /* AppConfig.swift */,
+    ); path = Config; sourceTree = "<group>"; };
+    00112233445566778899AAC7 /* BrisaAITests */ = {isa = PBXGroup; children = (
+        00E001000000000000000019 /* BrisaAITests.swift */,
+    ); path = BrisaAITests; sourceTree = "<group>"; };
+    00112233445566778899ABF0 /* BrisaAI */ = {isa = PBXGroup; children = (
+        00E001000000000000000018 /* Assets.xcassets */,
+        00E00100000000000000001A /* Info.plist */,
+        00112233445566778899AABE /* App */,
+        00112233445566778899AABF /* MenuBar */,
+        00112233445566778899AAC0 /* Hotkey */,
+        00112233445566778899AAC1 /* Windows */,
+        00112233445566778899AAC2 /* Agent */,
+        00112233445566778899AAC3 /* OpenAI */,
+        00112233445566778899AAC4 /* Logging */,
+        00112233445566778899AAC5 /* Permissions */,
+        00112233445566778899AAC6 /* Config */,
+    ); path = BrisaAI; sourceTree = "<group>"; };
+    00112233445566778899AABC /* Root */ = {isa = PBXGroup; children = (
+        00112233445566778899ABF0 /* BrisaAI */,
+        00112233445566778899AAC7 /* BrisaAITests */,
+        00112233445566778899AABD /* Products */,
+    ); sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+    00112233445566778899AAC8 /* BrisaAI */ = {isa = PBXNativeTarget; buildConfigurationList = 00112233445566778899AAD4 /* Build configuration list for PBXNativeTarget "BrisaAI" */; buildPhases = (
+        00112233445566778899AACA /* Sources */,
+        00112233445566778899AACC /* Frameworks */,
+        00112233445566778899AACB /* Resources */,
+        00112233445566778899AACD /* Post-build setup */,
+    ); buildRules = ( ); dependencies = ( ); name = BrisaAI; productName = BrisaAI; productReference = 00E00100000000000000001B /* BrisaAI.app */; productType = "com.apple.product-type.application"; };
+    00112233445566778899AAC9 /* BrisaAITests */ = {isa = PBXNativeTarget; buildConfigurationList = 00112233445566778899AAD5 /* Build configuration list for PBXNativeTarget "BrisaAITests" */; buildPhases = (
+        00112233445566778899AACE /* Sources */,
+        00112233445566778899AAD0 /* Frameworks */,
+        00112233445566778899AACF /* Resources */,
+    ); buildRules = ( ); dependencies = (
+        00112233445566778899AAE1 /* PBXTargetDependency */,
+    ); name = BrisaAITests; productName = BrisaAITests; productReference = 00E00100000000000000001C /* BrisaAITests.xctest */; productType = "com.apple.product-type.bundle.unit-test"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+    00112233445566778899AABB /* Project object */ = {isa = PBXProject; attributes = {LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500; ORGANIZATIONNAME = Brisa; TargetAttributes = { 00112233445566778899AAC8 = { CreatedOnToolsVersion = 15.0; }; 00112233445566778899AAC9 = { CreatedOnToolsVersion = 15.0; }; }; }; buildConfigurationList = 00112233445566778899AAD3 /* Build configuration list for PBXProject "BrisaAI" */; compatibilityVersion = "Xcode 15.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = ( en, Base ); mainGroup = 00112233445566778899AABC /* Root */; productRefGroup = 00112233445566778899AABD /* Products */; projectDirPath = ""; projectRoot = ""; targets = (
+        00112233445566778899AAC8 /* BrisaAI */,
+        00112233445566778899AAC9 /* BrisaAITests */,
+    ); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+    00112233445566778899AACB /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (
+        00F001000000000000000018 /* Assets.xcassets in Resources */,
+    ); runOnlyForDeploymentPostprocessing = 0; };
+    00112233445566778899AACF /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+    00112233445566778899AACD /* Post-build setup */ = {isa = PBXShellScriptBuildPhase; buildActionMask = 2147483647; files = ( ); inputFileListPaths = ( ); inputPaths = ( ); name = "Post-build setup"; outputFileListPaths = ( ); outputPaths = ( ); runOnlyForDeploymentPostprocessing = 0; shellPath = /bin/sh; shellScript = "APP_SUPPORT=\"$HOME/Library/Application Support/BrisaAI\"\nLOG_DIR=\"$HOME/Library/Logs/BrisaAI\"\nmkdir -p \"$APP_SUPPORT\" \"$LOG_DIR\"\n[ -f \"$APP_SUPPORT/memory.json\" ] || echo '{}' > \"$APP_SUPPORT/memory.json\"\n[ -f \"$LOG_DIR/log.txt\" ] || : > \"$LOG_DIR/log.txt\"\n"; };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+    00112233445566778899AACA /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+        00F001000000000000000017 /* AppConfig.swift in Sources */,
+        00F001000000000000000016 /* PermissionsGuide.swift in Sources */,
+        00F001000000000000000004 /* HotkeyManager.swift in Sources */,
+        00F001000000000000000011 /* VisionAnalyzer.swift in Sources */,
+        00F00100000000000000000B /* ClickTool.swift in Sources */,
+        00F001000000000000000009 /* Orchestrator.swift in Sources */,
+        00F00100000000000000000D /* WaitFor.swift in Sources */,
+        00F001000000000000000014 /* OpenAIClient.swift in Sources */,
+        00F001000000000000000013 /* TTSManager.swift in Sources */,
+        00F001000000000000000015 /* BrisaLogger.swift in Sources */,
+        00F00100000000000000000A /* OpenAppTool.swift in Sources */,
+        00F00100000000000000000F /* MemoryStore.swift in Sources */,
+        00F001000000000000000006 /* SettingsWindow.swift in Sources */,
+        00F001000000000000000012 /* STTManager.swift in Sources */,
+        00F001000000000000000007 /* LogsWindow.swift in Sources */,
+        00F00100000000000000000E /* NavigateURLTool.swift in Sources */,
+        00F001000000000000000005 /* CommandPaletteWindow.swift in Sources */,
+        00F001000000000000000001 /* BrisaAIApp.swift in Sources */,
+        00F001000000000000000010 /* ScreenCapture.swift in Sources */,
+        00F001000000000000000002 /* AppDelegate.swift in Sources */,
+        00F001000000000000000008 /* ConsentWindow.swift in Sources */,
+        00F00100000000000000000C /* TypeTool.swift in Sources */,
+        00F001000000000000000003 /* MenuBarController.swift in Sources */,
+        00F00100000000000000001D /* FileTool.swift in Sources */,
+    ); runOnlyForDeploymentPostprocessing = 0; };
+    00112233445566778899AACE /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+        00F001000000000000000019 /* BrisaAITests.swift in Sources */,
+    ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+    00112233445566778899AAE1 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = 00112233445566778899AAC8 /* BrisaAI */; targetProxy = 00112233445566778899AAE0 /* PBXContainerItemProxy */; };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+    00112233445566778899AAD6 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+        ALWAYS_SEARCH_USER_PATHS = NO;
+        CLANG_ANALYZER_NONNULL = YES;
+        CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+        CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+        CLANG_ENABLE_MODULES = YES;
+        CLANG_ENABLE_OBJC_ARC = YES;
+        CLANG_ENABLE_OBJC_WEAK = YES;
+        CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+        CLANG_WARN_BOOL_CONVERSION = YES;
+        CLANG_WARN_COMMA = YES;
+        CLANG_WARN_CONSTANT_CONVERSION = YES;
+        CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+        CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+        CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+        CLANG_WARN_EMPTY_BODY = YES;
+        CLANG_WARN_ENUM_CONVERSION = YES;
+        CLANG_WARN_INFINITE_RECURSION = YES;
+        CLANG_WARN_INT_CONVERSION = YES;
+        CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+        CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+        CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+        CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+        CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+        CLANG_WARN_STRICT_PROTOTYPES = YES;
+        CLANG_WARN_SUSPICIOUS_MOVE = YES;
+        CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+        CODE_SIGN_STYLE = Automatic;
+        COPY_PHASE_STRIP = NO;
+        DEBUG_INFORMATION_FORMAT = dwarf;
+        ENABLE_STRICT_OBJC_MSGSEND = YES;
+        ENABLE_TESTABILITY = YES;
+        GCC_C_LANGUAGE_STANDARD = gnu17;
+        GCC_DYNAMIC_NO_PIC = NO;
+        GCC_NO_COMMON_BLOCKS = YES;
+        GCC_OPTIMIZATION_LEVEL = 0;
+        GCC_PREPROCESSOR_DEFINITIONS = ( "DEBUG=1", "$(inherited)" );
+        GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+        GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+        GCC_WARN_UNDECLARED_SELECTOR = YES;
+        GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+        GCC_WARN_UNUSED_FUNCTION = YES;
+        GCC_WARN_UNUSED_VARIABLE = YES;
+        MACOSX_DEPLOYMENT_TARGET = 13.0;
+        MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+        ONLY_ACTIVE_ARCH = YES;
+        SDKROOT = macosx;
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+        SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+        SWIFT_VERSION = 5.0;
+    }; name = Debug; };
+    00112233445566778899AAD7 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+        ALWAYS_SEARCH_USER_PATHS = NO;
+        CLANG_ANALYZER_NONNULL = YES;
+        CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+        CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+        CLANG_ENABLE_MODULES = YES;
+        CLANG_ENABLE_OBJC_ARC = YES;
+        CLANG_ENABLE_OBJC_WEAK = YES;
+        CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+        CLANG_WARN_BOOL_CONVERSION = YES;
+        CLANG_WARN_COMMA = YES;
+        CLANG_WARN_CONSTANT_CONVERSION = YES;
+        CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+        CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+        CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+        CLANG_WARN_EMPTY_BODY = YES;
+        CLANG_WARN_ENUM_CONVERSION = YES;
+        CLANG_WARN_INFINITE_RECURSION = YES;
+        CLANG_WARN_INT_CONVERSION = YES;
+        CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+        CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+        CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+        CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+        CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+        CLANG_WARN_STRICT_PROTOTYPES = YES;
+        CLANG_WARN_SUSPICIOUS_MOVE = YES;
+        CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+        CODE_SIGN_STYLE = Automatic;
+        COPY_PHASE_STRIP = NO;
+        DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+        ENABLE_NS_ASSERTIONS = NO;
+        ENABLE_STRICT_OBJC_MSGSEND = YES;
+        GCC_C_LANGUAGE_STANDARD = gnu17;
+        GCC_NO_COMMON_BLOCKS = YES;
+        GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+        GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+        GCC_WARN_UNDECLARED_SELECTOR = YES;
+        GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+        GCC_WARN_UNUSED_FUNCTION = YES;
+        GCC_WARN_UNUSED_VARIABLE = YES;
+        MACOSX_DEPLOYMENT_TARGET = 13.0;
+        MTL_ENABLE_DEBUG_INFO = NO;
+        SDKROOT = macosx;
+        SWIFT_COMPILATION_MODE = wholemodule;
+        SWIFT_OPTIMIZATION_LEVEL = "-O";
+        SWIFT_VERSION = 5.0;
+    }; name = Release; };
+    00112233445566778899AAD8 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+        ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+        CODE_SIGN_STYLE = Automatic;
+        CODE_SIGNING_ALLOWED = NO;
+        CURRENT_PROJECT_VERSION = 1;
+        ENABLE_HARDENED_RUNTIME = NO;
+        GENERATE_INFOPLIST_FILE = NO;
+        INFOPLIST_FILE = BrisaAI/Info.plist;
+        LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/../Frameworks" );
+        MACOSX_DEPLOYMENT_TARGET = 13.0;
+        MARKETING_VERSION = 0.1.0;
+        PRODUCT_BUNDLE_IDENTIFIER = ai.brisa.mac;
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SDKROOT = macosx;
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = 1;
+    }; name = Debug; };
+    00112233445566778899AAD9 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+        ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+        CODE_SIGN_STYLE = Automatic;
+        CODE_SIGNING_ALLOWED = NO;
+        CURRENT_PROJECT_VERSION = 1;
+        ENABLE_HARDENED_RUNTIME = NO;
+        GENERATE_INFOPLIST_FILE = NO;
+        INFOPLIST_FILE = BrisaAI/Info.plist;
+        LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/../Frameworks" );
+        MACOSX_DEPLOYMENT_TARGET = 13.0;
+        MARKETING_VERSION = 0.1.0;
+        PRODUCT_BUNDLE_IDENTIFIER = ai.brisa.mac;
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SDKROOT = macosx;
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = 1;
+    }; name = Release; };
+    00112233445566778899AADA /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+        BUNDLE_LOADER = "$(TEST_HOST)";
+        CODE_SIGN_STYLE = Automatic;
+        INFOPLIST_KEY_CFBundleDisplayName = BrisaAITests;
+        MACOSX_DEPLOYMENT_TARGET = 13.0;
+        PRODUCT_BUNDLE_IDENTIFIER = ai.brisa.mac.tests;
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SWIFT_VERSION = 5.0;
+        TEST_HOST = "";
+    }; name = Debug; };
+    00112233445566778899AADB /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+        BUNDLE_LOADER = "$(TEST_HOST)";
+        CODE_SIGN_STYLE = Automatic;
+        INFOPLIST_KEY_CFBundleDisplayName = BrisaAITests;
+        MACOSX_DEPLOYMENT_TARGET = 13.0;
+        PRODUCT_BUNDLE_IDENTIFIER = ai.brisa.mac.tests;
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SWIFT_VERSION = 5.0;
+        TEST_HOST = "";
+    }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+    00112233445566778899AAD3 /* Build configuration list for PBXProject "BrisaAI" */ = {isa = XCConfigurationList; buildConfigurations = (
+        00112233445566778899AAD6 /* Debug */,
+        00112233445566778899AAD7 /* Release */,
+    ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+    00112233445566778899AAD4 /* Build configuration list for PBXNativeTarget "BrisaAI" */ = {isa = XCConfigurationList; buildConfigurations = (
+        00112233445566778899AAD8 /* Debug */,
+        00112233445566778899AAD9 /* Release */,
+    ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+    00112233445566778899AAD5 /* Build configuration list for PBXNativeTarget "BrisaAITests" */ = {isa = XCConfigurationList; buildConfigurations = (
+        00112233445566778899AADA /* Debug */,
+        00112233445566778899AADB /* Release */,
+    ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+  };
+  rootObject = 00112233445566778899AABB /* Project object */;
+}
